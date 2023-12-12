@@ -1,6 +1,7 @@
 import React from 'react';
 import DisplayCounter from "@/component/DisplayCounter";
 import CounterUpdate from "@/component/CounterUpdate";
+import NestCounter from "@/component/NestCounter";
 
 function Index() {
   console.log('index render - ', new Date().getTime());
@@ -12,6 +13,9 @@ function Index() {
       </h1>
       <DisplayCounter />
       <CounterUpdate />
+
+      <div>----------------------</div>
+      <NestCounter />
     </div>
   )
 }

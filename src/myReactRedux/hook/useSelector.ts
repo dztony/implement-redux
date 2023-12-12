@@ -8,21 +8,23 @@ function useSelector(selector: ISelector): any {
   const { store, subscription } = React.useContext(ReactReduxContext);
   const curStateValue = selector(store.getState());
 
-  const preStateValue = useRef<any>(null);
+  const preStateValue = useRef(curStateValue);
   const [_, forceUpdate] = useReducer(x => x +1, 0);
 
   useEffect(() => {
     const unsubscribe = subscription.subscribe(() => {
-      if (isEqual(curStateValue, preStateValue.current)) {
+      console.log('每次 dispatch action 后，会执行这里的回调，但是视情况进行 re render - ', new Date().getTime());
+      const computeValue = selector(store.getState());
+      if (isEqual(computeValue, preStateValue.current)) {
         return;
       }
 
-      preStateValue.current = curStateValue;
+      preStateValue.current = computeValue;
       forceUpdate();
     });
 
     return unsubscribe;
-  }, [store, subscription, curStateValue]);
+  }, [subscription, store, selector]);
 
   return curStateValue;
 }
