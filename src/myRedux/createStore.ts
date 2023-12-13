@@ -5,7 +5,7 @@ import type {
   IReducer,
 } from "@/myRedux";
 
-export function createStore(reducer: IReducer): IStore {
+export default function createStore(reducer: IReducer): IStore {
   let state: any;
   let listenerCollection: Map<number, IListener> = new Map();
   let collectionId = 0;

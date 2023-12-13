@@ -4,7 +4,7 @@ import DisplayCounter from "@/component/DisplayCounter";
 import { useSelector } from "@/myReactRedux";
 
 function NestCounter() {
-  const testValue = useSelector(state => state.test);
+  const testValue = useSelector(state => state.counter.test);
 
   console.log('NestCounter render - ', new Date().getTime());
   return (

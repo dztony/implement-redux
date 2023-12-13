@@ -1,4 +1,7 @@
-import { createStore } from "@/myRedux/createStore";
+import createStore from "@/myRedux/createStore";
+import combineReducers from "@/myRedux/combineReducers";
+
+
 import {
   IStore,
   IListener,
@@ -9,6 +12,7 @@ import {
 
 export {
   createStore,
+  combineReducers,
 }
 
 export type {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from '@/myReactRedux';
 
 function DisplayCounter() {
-  const counterValue = useSelector(state => state.value);
+  const counterValue = useSelector(state => state.counter.value);
   console.log('DisplayCounter render - ', new Date().getTime());
   return (
     <div>
