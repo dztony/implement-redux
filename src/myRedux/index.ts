@@ -3,6 +3,8 @@ import {
   IStore,
   IListener,
   IState,
+  IAction,
+  IReducer,
 } from '@/myRedux/types';
 
 export {
@@ -13,4 +15,6 @@ export type {
   IStore,
   IListener,
   IState,
+  IAction,
+  IReducer,
 }

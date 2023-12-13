@@ -5,11 +5,7 @@ const initState = {
   test: '测试数据 - 不会变更',
 };
 
-function counterReducer(state: IState = initState, action?: IAction) {
-  if (!action) {
-    return state;
-  }
-
+function counterReducer(state: IState = initState, action: IAction) {
   if (action.type === 'counter/increment') {
     const preValue = state.value;
     return {

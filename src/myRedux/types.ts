@@ -5,7 +5,7 @@ export type IAction = {
 };
 export type IListener = () => void;
 
-export type IReducer = (initState?: IState, action?: IAction) => IState;
+export type IReducer = (initState: IState, action: IAction) => IState;
 
 export type IStore = {
   dispatch: (action: IAction) => void;

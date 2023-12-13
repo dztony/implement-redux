@@ -1,5 +1,4 @@
-import { IStore } from "@/myRedux";
-import type { IListener } from "@/myRedux";
+import type { IListener, IStore } from "@/myRedux";
 
 export default class Subscription {
   listeners: Map<number, IListener>;

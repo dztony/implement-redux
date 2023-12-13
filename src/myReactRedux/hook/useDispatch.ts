@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactReduxContext from "@/myReactRedux/Provider/ReactReduxContext";
+import ReactReduxContext from "@/myReactRedux/ReactReduxContext";
 
 function useDispatch() {
   const { store } = React.useContext(ReactReduxContext);
