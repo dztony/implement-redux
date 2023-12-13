@@ -1,5 +1,5 @@
 import React from 'react';
-import useSelector from "@/myReactRedux/hook/useSelector";
+import { useSelector } from '@/myReactRedux';
 
 function DisplayCounter() {
   const counterValue = useSelector(state => state.value);

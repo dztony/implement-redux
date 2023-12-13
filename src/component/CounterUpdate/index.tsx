@@ -1,5 +1,5 @@
 import React from 'react';
-import useDispatch from "@/myReactRedux/hook/useDispatch";
+import { useDispatch } from "@/myReactRedux";
 
 function CounterUpdate() {
   const dispatch = useDispatch();

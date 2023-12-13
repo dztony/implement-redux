@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useRef } from 'react';
-import { IState } from "@/myRedux";
-import ReactReduxContext from "@/myReactRedux/ReactReduxContext";
+import type { IState } from "@/myRedux";
+import ReactReduxContext from "@/myReactRedux/Provider/ReactReduxContext";
 
 type ISelector = (state: IState) => any;
 

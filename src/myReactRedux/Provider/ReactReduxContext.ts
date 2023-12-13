@@ -1,6 +1,6 @@
 import React from 'react';
 import { IStore } from "@/myRedux";
-import Subscription from "@/myReactRedux/Subscription";
+import Subscription from "@/myReactRedux/Provider/Subscription";
 
 export type IReactReduxContext = {
   store: IStore;

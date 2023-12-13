@@ -1,7 +1,7 @@
 import React from 'react';
 import CounterUpdate from "@/component/CounterUpdate";
 import DisplayCounter from "@/component/DisplayCounter";
-import useSelector from "@/myReactRedux/hook/useSelector";
+import { useSelector } from "@/myReactRedux";
 
 function NestCounter() {
   const testValue = useSelector(state => state.test);
