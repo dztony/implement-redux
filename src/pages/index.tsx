@@ -1,23 +1,17 @@
 import React from 'react';
-import DisplayCounter from "@/component/DisplayCounter";
-import CounterUpdate from "@/component/CounterUpdate";
-import NestCounter from "@/component/NestCounter";
+import Link from "next/link";
 
 function Index() {
-  console.log('index render - ', new Date().getTime());
-
   return (
     <div>
       <h1>
-        首页
+        Index page
       </h1>
-      <DisplayCounter />
-      <CounterUpdate />
-
-      <div>----------------------</div>
-      <NestCounter />
+      <Link href={'/reduxV1'}>
+        redux Provider 版本实现的状态管理页面
+      </Link>
     </div>
-  )
+  );
 }
 
 export default Index;
