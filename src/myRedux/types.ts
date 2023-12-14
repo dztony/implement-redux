@@ -8,7 +8,13 @@ export type IListener = () => void;
 export type IReducer = (initState: IState, action: IAction) => IState;
 
 export type IStore = {
-  dispatch: (action: IAction) => void;
-  getState: () => IState;
+  dispatch: IDispatch;
+  getState: IGetState;
   subscribe: (listener: IListener) => any;
 };
+
+export type ICreateStore = (r: IReducer) => IStore;
+
+export type IDispatch = (action: IAction) => void;
+
+export type IGetState = () => IState;

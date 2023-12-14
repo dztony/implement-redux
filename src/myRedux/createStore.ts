@@ -3,7 +3,7 @@ import type {
   IListener,
   IStore,
   IReducer,
-} from "@/myRedux";
+} from "@/myRedux/types";
 
 export default function createStore(reducer: IReducer): IStore {
   let state: any;

@@ -8,6 +8,9 @@ import {
   IState,
   IAction,
   IReducer,
+  ICreateStore,
+  IGetState,
+  IDispatch,
 } from '@/myRedux/types';
 
 export {
@@ -21,4 +24,7 @@ export type {
   IState,
   IAction,
   IReducer,
+  ICreateStore,
+  IGetState,
+  IDispatch,
 }
