@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from "@/myReactRedux";
+import { actionCounterReset } from "@/state/feature/counterReducer";
 
 function CounterUpdate() {
   const dispatch = useDispatch();
@@ -10,6 +11,15 @@ function CounterUpdate() {
       <h2>
         CounterUpdate 组件
       </h2>
+      <div>
+        <button
+          onClick={() => {
+            dispatch(actionCounterReset());
+          }}
+        >
+          重置 counter
+        </button>
+      </div>
 
       <div>
         <button

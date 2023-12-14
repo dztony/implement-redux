@@ -1,4 +1,5 @@
-import { IAction, IState } from "@/myRedux";
+import { IAction, IDispatch, IGetState, IState } from "@/myRedux";
+import { timeout } from "@/util/common";
 
 const initState = {
   value: 0,
@@ -22,7 +23,27 @@ function counterReducer(state: IState = initState, action: IAction) {
     };
   }
 
+  if (action.type === 'counter/reset') {
+    return {
+      ...state,
+      value: action.payload.initValue,
+    }
+  }
+
   return state;
+}
+
+export function actionCounterReset() {
+  return async function(getState: IGetState, dispatch: IDispatch) {
+    await timeout();
+    const initValue = 0;
+    dispatch({
+      type: 'counter/reset',
+      payload: {
+        initValue,
+      },
+    });
+  }
 }
 
 export default counterReducer;

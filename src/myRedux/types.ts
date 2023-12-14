@@ -15,6 +15,6 @@ export type IStore = {
 
 export type ICreateStore = (r: IReducer) => IStore;
 
-export type IDispatch = (action: IAction) => void;
+export type IDispatch = (action: IAction | Function) => void;
 
 export type IGetState = () => IState;
