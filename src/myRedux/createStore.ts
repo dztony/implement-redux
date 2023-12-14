@@ -20,7 +20,7 @@ export default function createStore(reducer: IReducer): IStore {
     };
   }
 
-  function dispatch(curAction: IAction) {
+  function dispatch(curAction: IAction | any) {
     const preState = state;
     const curState = reducer(preState, curAction);
     state = curState;
